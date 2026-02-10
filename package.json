@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/fetch-calendar.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },
