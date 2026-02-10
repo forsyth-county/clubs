@@ -1,6 +1,8 @@
 import React from 'react';
 import { useCalendarEvents } from '../hooks/useCalendarEvents';
 
+const MAX_DISPLAYED_EVENTS = 8;
+
 const UpcomingEvents = () => {
   const { events, loading, error, calendarUrl } = useCalendarEvents();
 
@@ -39,7 +41,7 @@ const UpcomingEvents = () => {
 
       {!loading && !error && events.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {events.slice(0, 8).map((event, idx) => (
+          {events.slice(0, MAX_DISPLAYED_EVENTS).map((event, idx) => (
             <div
               key={idx}
               className="bg-neutral-900/80 border border-neutral-700 rounded-lg p-4 hover:border-indigo-500/50 transition-colors"

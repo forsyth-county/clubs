@@ -56,7 +56,7 @@ export function useCalendarEvents() {
 
     async function fetchCalendar() {
       try {
-        const response = await fetch(CALENDAR_URL);
+        const response = await fetch(CALENDAR_URL, { mode: 'cors' });
         if (!response.ok) throw new Error('Failed to fetch calendar');
         const html = await response.text();
         if (!cancelled) {
