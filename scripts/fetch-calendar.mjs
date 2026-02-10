@@ -43,8 +43,8 @@ function parseEventsFromHTML(html) {
     let start = '', end = '';
     const startDt = slice.match(/class="fsStartTime"[^>]*>.*?<span class="fsHour">\s*(\d+)<\/span>:<span class="fsMinute">(\d+)<\/span>\s*<span class="fsMeridian">(\w+)<\/span>/s);
     const endDt = slice.match(/class="fsEndTime"[^>]*>.*?<span class="fsHour">\s*(\d+)<\/span>:<span class="fsMinute">(\d+)<\/span>\s*<span class="fsMeridian">(\w+)<\/span>/s);
-    if (startDt) start = `${startDt[1].trim()}:${startDt[2]} ${startDt[3]}`;
-    if (endDt) end = `${endDt[1].trim()}:${endDt[2]} ${endDt[3]}`;
+    if (startDt) start = `${startDt[1].trim()}:${startDt[2].padStart(2, '0')} ${startDt[3]}`;
+    if (endDt) end = `${endDt[1].trim()}:${endDt[2].padStart(2, '0')} ${endDt[3]}`;
 
     events.push({ title, date, start, end });
   }

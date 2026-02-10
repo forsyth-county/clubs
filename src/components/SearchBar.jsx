@@ -14,7 +14,7 @@ const SearchBar = ({ searchTerm, onSearchChange }) => {
             className="w-full px-5 py-3.5 pl-12 rounded-2xl glass text-white placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-indigo-500/50 focus:border-indigo-500/30 transition-all duration-200 text-sm"
           />
           <svg
-            className="absolute left-4 top-4 h-4.5 w-4.5 text-neutral-500"
+            className="absolute left-4 top-4 h-4 w-4 text-neutral-500"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
