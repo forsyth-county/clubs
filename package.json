@@ -2,6 +2,7 @@
   "name": "school-club-discovery",
   "version": "1.0.0",
   "description": "A responsive React application for discovering school clubs",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "vite",

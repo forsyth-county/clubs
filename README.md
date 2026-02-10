@@ -2,6 +2,8 @@
 
 A responsive React application for discovering and exploring school clubs at Alliance High School.
 
+🌐 **Live Demo**: [https://forsyth-county.github.io/clubs/](https://forsyth-county.github.io/clubs/)
+
 ## Features
 
 - **56 Real Clubs**: All clubs, CTSOs, organizations, and competitions from the school
@@ -30,17 +32,43 @@ npm run build
 npm run preview
 ```
 
+## Deployment
+
+This project is automatically deployed to GitHub Pages when changes are pushed to the `main` branch.
+
+### How it works:
+
+1. **GitHub Actions Workflow** (`.github/workflows/deploy.yml`) automatically:
+   - Installs dependencies
+   - Builds the project
+   - Deploys to GitHub Pages
+
+2. **Vite Configuration** sets the base path to `/clubs/` for proper asset loading on GitHub Pages
+
+3. **Automatic Deployment**: Push to `main` branch triggers deployment
+
+### Manual Deployment:
+
+You can also trigger deployment manually:
+1. Go to the "Actions" tab in GitHub
+2. Select "Deploy to GitHub Pages"
+3. Click "Run workflow"
+
 ## Technology Stack
 
 - **React 18** - Modern UI framework
 - **Vite** - Fast build tool and dev server
 - **Tailwind CSS** - Utility-first styling
 - **PostCSS** - CSS processing
+- **GitHub Pages** - Free hosting platform
 
 ## Project Structure
 
 ```
 clubs/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml         # GitHub Pages deployment
 ├── src/
 │   ├── components/
 │   │   └── ClubCard.jsx      # Individual club card component
